@@ -1,24 +1,11 @@
-# README
+# README for Chris Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## My first blog on RoR.
+It's a few pages blog with CRUD to tell you my favorite quotes from sci-fi and fantasy series.
 
-Things you may want to cover:
+### Configuration
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby: 3.1.2
+Rails 7.0.3.1
+Bundler version 2.3.18
+Database PostgreSQL 10
