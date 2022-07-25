@@ -2,4 +2,12 @@
 
 <p><%= @article.body %></p>
 
-<p>Adit these qoutes via <%= link_to "this form", edit_article_path(@article) %> if you'd like!</p>
+<ul>
+    <li>Edit these qoutes via <%= link_to "Edit form.", edit_article_path(@article) %></li>
+    <li>Delete these qoutes via <%= link_to "Delete!", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+<p>Go back to the list of quotes via <%= link_to "Home", root_path %></p>
