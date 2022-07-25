@@ -4,10 +4,10 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-       <a href="/articles/<%= article.id %>">
-        <%= article.title %>
-       </a>
+       <%= link_to article.title, article %>
     </li>
   <% end %>
 </ul>
 </div>
+
+<p>Add new qoutes via <%= link_to "this form", new_article_path %> if you'd like!</p>
