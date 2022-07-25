@@ -1,0 +1,13 @@
+<h1><%= @article.title %></h1>
+
+<p><%= @article.body %></p>
+
+<ul>
+    <li>Edit these qoutes via <%= link_to "Edit form.", edit_article_path(@article) %></li>
+    <li>Delete these qoutes via <%= link_to "Delete!", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+<p>Go back to the list of quotes via <%= link_to "Home", root_path %></p>
