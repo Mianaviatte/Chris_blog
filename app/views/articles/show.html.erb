@@ -1,13 +1,18 @@
 <h1><%= @article.title %></h1>
-
+ 
 <p><%= @article.body %></p>
 
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment</h2>
+<%= render 'comments/form' %>
+
 <ul>
-    <li>Edit these qoutes via <%= link_to "Edit form.", edit_article_path(@article) %></li>
-    <li>Delete these qoutes via <%= link_to "Delete!", article_path(@article), data: {
+    <li><%= link_to "Edit form.", edit_article_path(@article) %> Edit these qoutes.</li>
+    <li><%= link_to "Delete!", article_path(@article), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
-                  } %></li>
+                  } %> Delete these qoutes.</li>
+    <li><%= link_to "Home.", root_path %> Go back to the list of quotes.</li>
 </ul>
-
-<p>Go back to the list of quotes via <%= link_to "Home", root_path %></p>
