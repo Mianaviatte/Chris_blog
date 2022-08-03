@@ -1,13 +1,15 @@
 <h1>My favorite series & their quotes:</h1>
 
-<div>
+<p>There are<%= Article.public_count %> articles and counting!</p>
+
 <ul>
   <% @articles.each do |article| %>
-    <li>
-       <%= link_to article.title, article %>
-    </li>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
-</div>
 
 <p><%= link_to "New quote.", new_article_path %> Add new qoutes if you'd like!</p>
