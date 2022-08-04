@@ -10,6 +10,7 @@ It's a few pages blog with:
 ### Work_in_progress:  
 - authentication with Device  
 - UI with Bootstrap  
+- Heroku deploy  
 
 ### Configuration  
 
